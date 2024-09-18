@@ -34,4 +34,4 @@ async def favicon():
     file_path = os.path.join(app.root_path, "static", file_name)
     return FileResponse(path=file_path, headers={"Content-Disposition": "attachment; filename=" + file_name})
 
-print("test bro")
+print("test coin bro")

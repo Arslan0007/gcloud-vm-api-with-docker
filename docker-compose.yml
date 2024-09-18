@@ -1,0 +1,19 @@
+services:
+  coinapi-python:
+    build: ./coinApi
+    ports:
+      - "80:80"
+    networks:
+      - coinandweatherapinetwork
+    depends_on:
+      - "weatherapi-python"
+
+  weatherapi-python:
+    build: ./weatherApi
+    ports:
+      - "81:81"
+    networks:
+      - coinandweatherapinetwork
+
+networks:
+  coinandweatherapinetwork:
